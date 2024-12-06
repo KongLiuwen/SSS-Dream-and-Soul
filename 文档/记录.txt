@@ -1,0 +1,140 @@
+简单需求分析，区分管理员和用户功能
+
+管理员有：
+首页
+登录|退出
+文章分类（增删改查）
+文章列表（增删改查）
+预约管理（查、审批）
+文件下载
+
+用户有：
+首页
+登录|注册|退出
+文章列表（查看）
+情绪日记（增删改查）
+情绪趋势（趋势折线图）
+预约提交
+文件上传
+
+用户表 (users)：
+php artisan make:model User
+
+心理健康文章表 (articles)：
+php artisan make:model Article
+
+分类表 (categories)：
+php artisan make:model Category
+
+情绪日记表 (mood_diaries)：
+php artisan make:model MoodDiary
+心理咨询预约表 (appointments)：
+php artisan make:model Appointment
+
+文件上传表 (uploads)：
+php artisan make:model Upload
+
+
+以下是去重后的词汇及其英文翻译：
+
+---
+
+### 平台功能相关
+- 心理健康平台: Mental Health Platform
+- 首页: Home
+- 文章分类: Article Categories
+- 文章列表: Article List
+- 情绪日记: Mood Diary
+- 情绪趋势: Mood Trends
+- 预约管理: Appointment Management
+- 文件下载: File Download
+- 文件上传: File Upload
+- 退出: Logout
+- 登录: Login
+- 注册: Register
+
+---
+
+### 预约相关
+- 用户: User
+- 日期: Date
+- 时间: Time
+- 状态: Status
+- 操作: Action
+- 待审核: Pending Review
+- 已批准: Approved
+- 已拒绝: Rejected
+- 更新: Update
+- 创建预约: Create Appointment
+- 提交: Submit
+- 我的预约: My Appointments
+
+---
+
+### 文章相关
+- 编辑文章: Edit Article
+- 新增文章: Add Article
+- 标题: Title
+- 分类: Category
+- 内容: Content
+- 保存: Save
+- 查看: View
+- 确定删除吗: Confirm Deletion?
+- 删除: Delete
+- 创建时间: Creation Time
+- 返回列表: Back to List
+
+---
+
+### 分类相关
+- 分类: Category
+- 分类名称: Category Name
+- 分类列表: Category List
+
+---
+
+### 登录与注册
+- 邮箱: Email
+- 密码: Password
+- 姓名: Name
+- 确认密码: Confirm Password
+
+---
+
+### 情绪日记相关
+- 情绪趋势图: Mood Trend Chart
+- 情绪记录趋势: Mood Record Trends
+- 心情趋势: Mood Trends
+- 心情值: Mood Value
+- 新增情绪日记: Add Mood Diary
+- 心情: Mood
+- 开心: Happy
+- 焦虑: Anxious
+- 压力: Stressed
+- 平静: Calm
+- 备注: Notes
+- 编辑情绪日记: Edit Mood Diary
+- 新增日记: Add Diary
+
+---
+
+### 文件管理相关
+- 用户文件管理: User File Management
+- 文件名: File Name
+- 上传时间: Upload Time
+- 下载: Download
+- 暂无文件上传记录: No File Upload Records
+- 选择文件: Select File
+- 上传: Upload
+- 我的上传记录: My Upload Records
+- 暂无上传记录: No Upload Records
+
+---
+
+### 平台提示
+- 欢迎来到心理健康平台: Welcome to the Mental Health Platform
+- 一个支持心理健康的 Web 平台，提供文章阅读、情绪日记记录、预约心理咨询等功能: A web platform supporting mental health, offering article reading, mood diary recording, and psychological consultation appointments.
+- 管理员功能: Admin Features
+- 用户功能: User Features
+- 请登录或注册以使用平台功能: Please log in or register to use platform features
+
