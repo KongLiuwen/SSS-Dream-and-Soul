@@ -15,7 +15,6 @@ class Upload extends Model
         'file_path',
     ];
 
-    // 定义与用户的关系
     public function user()
     {
         return $this->belongsTo(User::class);

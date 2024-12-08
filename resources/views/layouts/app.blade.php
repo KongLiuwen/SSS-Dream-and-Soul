@@ -24,7 +24,7 @@
                     </li>
 
                     @if (auth()->user()->role == 'admin')
-                        <!-- 管理员功能 -->
+                        <!--admin -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('categories.index') }}">Article Categories</a>
                         </li>
@@ -38,7 +38,7 @@
                             <a class="nav-link" href="{{ route('admin.uploads.index') }}">File Download</a>
                         </li>
                     @else
-                        <!-- 普通User Features -->
+                        <!-- User Features -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('articles.index') }}">Article List</a>
                         </li>
@@ -56,7 +56,7 @@
                         </li>
                     @endif
 
-                    <!-- 公共功能 -->
+                
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST" class="d-inline">
                             @csrf
@@ -64,7 +64,7 @@
                         </form>
                     </li>
                 @else
-                    <!-- 未LoginUser Features -->
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
@@ -105,20 +105,20 @@
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // 获取所有带有 'alert' 类名的元素
+        
         var alerts = document.getElementsByClassName('alert');
 
-        // 遍历每个 alert 元素
+     
         for (var i = 0; i < alerts.length; i++) {
             (function(alert) {
-                // 设置定时器，3秒后隐藏
+               
                 setTimeout(function () {
-                    alert.style.transition = 'opacity 0.5s ease'; // 添加淡出效果
-                    alert.style.opacity = '0'; // 设置透明度为 0
+                    alert.style.transition = 'opacity 0.5s ease'; 
+                    alert.style.opacity = '0'; 
                     setTimeout(function () {
-                        alert.remove(); // 完全隐藏后移除元素
-                    }, 500); // 等待淡出效果完成后移除
-                }, 500); // 3秒后开始隐藏
+                        alert.remove(); 
+                    }, 500); 
+                }, 500); 
             })(alerts[i]);
         }
     });

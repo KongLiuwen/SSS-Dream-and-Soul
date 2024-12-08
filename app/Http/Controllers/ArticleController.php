@@ -28,7 +28,6 @@ class ArticleController extends Controller
             'category_id' => 'required|exists:categories,id',
         ]);
 
-        // 从请求中移除 `_token`
         $data = $request->except('_token');
 
         Article::create($data);
@@ -55,7 +54,7 @@ class ArticleController extends Controller
             'category_id' => 'required|exists:categories,id',
         ]);
 
-        // 从请求中移除 `_token`
+
         $data = $request->except('_token');
 
         $article->update($data);

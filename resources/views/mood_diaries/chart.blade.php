@@ -12,24 +12,23 @@
 @section('scripts')
     <script src="{{ asset('js/chart.js') }}"></script>
     <script>
-        // 获取图表数据
+
         fetch("{{ url('/mood-diaries/chart-data') }}")
             .then(response => response.json())
             .then(data => {
                 const ctx = document.getElementById('moodChart').getContext('2d');
 
-                // 创建折线图
                 new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: data.dates, // X轴：日期
+                        labels: data.dates, 
                         datasets: [{
                             label: 'Mood Trends',
-                            data: data.moods, // Y轴：Mood
+                            data: data.moods, 
                             borderColor: 'rgba(75, 192, 192, 1)',
                             backgroundColor: 'rgba(75, 192, 192, 0.2)',
                             borderWidth: 2,
-                            tension: 0.4, // 平滑曲线
+                            tension: 0.4, 
                         }]
                     },
                     options: {

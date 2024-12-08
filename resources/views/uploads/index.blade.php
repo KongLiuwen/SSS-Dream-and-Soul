@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <h2 class="mb-4">File Upload</h2>
-            <!-- 文件上传表单 -->
+         
             <form action="{{ route('uploads.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
@@ -13,7 +13,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Upload</button>
             </form>
-            <!-- 显示已上传的文件 -->
+    
             <h2 class="mt-5">My Upload Records</h2>
             <table class="table">
                 <thead>

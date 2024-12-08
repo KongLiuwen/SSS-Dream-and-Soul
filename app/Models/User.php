@@ -23,7 +23,6 @@ class User extends Authenticatable
         // Add any other attributes you want to allow for mass assignment
     ];
 
-    // 定义与 Appointment 的一对多关系
     public function appointments()
     {
         return $this->hasMany(Appointment::class);

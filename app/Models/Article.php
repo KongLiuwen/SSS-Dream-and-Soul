@@ -15,7 +15,6 @@ class Article extends Model
         'category_id',
     ];
 
-    // 定义与 Category 的关系
     public function category()
     {
         return $this->belongsTo(Category::class);

@@ -11,7 +11,6 @@ class MoodDiary extends Model
 
     protected $fillable = ['user_id', 'mood', 'description'];
 
-    // 关联用户
     public function user()
     {
         return $this->belongsTo(User::class);

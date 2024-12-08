@@ -9,7 +9,6 @@ class Appointment extends Model
 {
     use HasFactory;
 
-    // 可填充的字段
     protected $fillable = [
         'user_id',
         'date',
@@ -17,7 +16,6 @@ class Appointment extends Model
         'status',
     ];
 
-    // 定义与用户的关系
     public function user()
     {
         return $this->belongsTo(User::class);

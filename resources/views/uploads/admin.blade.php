@@ -21,7 +21,7 @@
         @forelse ($uploads as $upload)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $upload->user->name }}</td> <!-- 显示用户名称 -->
+                <td>{{ $upload->user->name }}</td> 
                 <td>{{ $upload->file_name }}</td>
                 <td>{{ $upload->created_at }}</td>
                 <td>
